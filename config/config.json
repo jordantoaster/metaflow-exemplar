@@ -1,0 +1,5 @@
+{
+    "METAFLOW_DATASTORE_SYSROOT_S3": "s3://metaflow-test-bucket-jmcd/metaflow",
+    "METAFLOW_DATATOOLS_SYSROOT_S3": "s3://metaflow-test-bucket-jmcd/metaflow/data",
+    "METAFLOW_DEFAULT_DATASTORE": "s3"
+}
