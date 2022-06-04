@@ -1,0 +1,4 @@
+metaflow==2.6.3
+pandas==1.4.2
+scikit-learn==1.1.1
+numpy==1.22.4
