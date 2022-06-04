@@ -30,4 +30,5 @@ Note: Not working due to permissions errors on stack create.
 - https://github.com/helli0n/metaflow-example
 
 ## Todo
-- Cloudformation working to enable creation of batch job submissions to AWS.
+- Cloudformation working to enable creation of batch job submissions to AWS (ask ops team on best approach/permissions?)
+    - Or run in personal AWS. 
