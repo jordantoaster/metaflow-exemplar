@@ -14,6 +14,12 @@ class RegressionModel(FlowSpec):
         help='Text File With Regression Numbers',
         is_text=True,
         default='dataset.txt')
+    
+    # Dummy parameter - can specified via command line 'run': e.g. --dummy_alpha 0.6
+    # Parameters can also be defined as JSON for more complex structures.
+    DUMMY_ALPHA = Parameter('dummy_alpha',
+                    help='dummy paramater, this can be anything!',
+                    default=0.01)
 
     @step
     def start(self):
@@ -21,6 +27,7 @@ class RegressionModel(FlowSpec):
         print("flow name: %s" % current.flow_name)
         print("run id: %s" % current.run_id)
         print("username: %s" % current.username)
+        print("dummy alpha: %s" % self.DUMMY_ALPHA)
 
         # Data is an array of lines from the text file containing the numbers
         raw_data = StringIO(self.DATA_FILE).readlines()
@@ -89,10 +96,6 @@ class RegressionModel(FlowSpec):
 
     @step
     def end(self):
-        """
-        The final step is empty here, but cleaning operations and/or sending hooks for downstream deployment tasks
-        is a natural necessity for machine learning DAGs.
-        """
         print('Dag ended!')
 
 if __name__ == '__main__':
