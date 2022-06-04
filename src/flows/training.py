@@ -44,7 +44,7 @@ class RegressionModel(FlowSpec):
         self.normalise = [True, False]
         self.next(self.train_model, foreach='normalise')
 
-    # @batch(gpu=1, memory=80000)
+    @batch(memory=60000, cpu=8)
     @step
     def train_model(self):
 
